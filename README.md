@@ -38,7 +38,7 @@ Download one or both files to your local computer where you have Matlab installe
 They can be found above ([pplane](https://github.com/OwenLewis/Spring21_Math412/blob/master/pplane8.m) and [dfield](https://github.com/OwenLewis/Spring21_Math412/blob/master/dfield8.m)).
 It does not matter precisely which folder you place them in, but put them somewhere where that you will remember and they will not get lost in the clutter. 
 Open Matlab as you normally would. 
-Navigate to the directory where you have saved pplane8.m and dfield.m. 
+Navigate to the directory where you have saved pplane8.m and dfield8.m. 
 This can be done one of two ways.
 One option is to use commands in the "Command Window".
 For example, you could type the command
@@ -50,7 +50,7 @@ For example, you could type the command
 and hit enter. 
 Alternately, you could simply click the appropriate folders shown in the "Current Folder" window. 
 The bar above the Command Window will show you which directory Matlab considers the "current directory" (shown in the red circle below). 
-You will know you're in the correct directory when you see the appropriate files int he "Current Folder" window (shown in the green circle below).
+You will know you're in the correct directory when you see the appropriate files in the "Current Folder" window (shown in the green circle below).
 
 ![Alt Text](./directory.png)
 
