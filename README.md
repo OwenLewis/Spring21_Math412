@@ -1,17 +1,17 @@
-<h1> Math 412 - 001
+<h1> Math 412 - 001</h1>
 
 This repository will serve as a way to distribute useful code and software for use during the term. 
 It will be updated as regularly as I can manage. 
 
 
-<h2>Matlab
+<h2>Matlab</h2>
 
 Matlab is a general purpose mathematics and computing environment sold by MathWorks.
 As a UNM Student, you have access to a free download of Matlab with your UNM ID. 
 To install it on your personal computing device, follow the instructions found on the UNM IT website [here](http://it.unm.edu/download/). 
 
 
-<h2> PPlane and DField
+<h2>PPlane and DField</h2>
 
 PPlane and Dfield are useful tools which have been written in the Matlab programming language. 
 Dfield can be used to visualize the phase line and solutions to one-dimensional dynamical systems.
@@ -32,7 +32,7 @@ I have changed a single line in the PPlane source file to ensure that it works w
 I have tested in on Matlab 2020 and Matlab 2021.
 Hopefully it will continue to work for the forseeable future.
 
-<h3>Installing PPlane and DField
+<h3>Installing PPlane and DField</h3>
 
 Download one or both files to your local computer where you have Matlab installed. 
 It does not matter precisely which folder you place them in, but put them somewhere where that you will remember and they will not get lost in the clutter. 
