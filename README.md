@@ -35,6 +35,7 @@ Hopefully it will continue to work for the forseeable future.
 <h3>Installing PPlane and DField</h3>
 
 Download one or both files to your local computer where you have Matlab installed. 
+They can be found above ([pplane](https://github.com/OwenLewis/Spring21_Math412/blob/master/pplane8.m) and [dfield](https://github.com/OwenLewis/Spring21_Math412/blob/master/dfield8.m)).
 It does not matter precisely which folder you place them in, but put them somewhere where that you will remember and they will not get lost in the clutter. 
 Open Matlab as you normally would. 
 Navigate to the directory where you have saved pplane8.m and dfield.m. 
