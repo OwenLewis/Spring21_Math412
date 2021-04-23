@@ -63,3 +63,39 @@ Happy phase-planing!
 
 ![Alt Text](./run.png)
 
+
+<h2>Lorenz_Explore</h2>
+I have added my own file named "lorenz_explore.m" to the repository. 
+It is designed to simply integrate the Lorenz equations for various parameter values and plot the results. 
+The purpose is for you to explore the various behaviors that existing within this shockingly diverse dynamical system. 
+To begin, download it as you would any of the other files in the repository, make sure the file is in the directory of your choice, and navigate to that directory in Matlab. 
+If you ever forget how to use this program, you can type 
+
+```matlab
+	help lorenz_explore
+```
+and Matlab will print a small reminder for you (see screenshot). 
+
+![Alt Text](./explore.png)
+
+To run the program, you can call it with 7 arguments:
+* The parameter r
+* The parameter sigma
+* The parameter b
+* Your preferred initial condition for the x-coordinate
+* Your preferred initial condition for the y-coordinate
+* Your preferred initial condition for the z-coordinate
+* The amount of time you wish to draw the solution for.
+
+For example, you could type
+
+```matlab
+	lorenz_explore(28,10,8/3,0,1,0,30)
+```
+
+The program will numerically approximate the solution and plot two figures. 
+Figure 1 will show the trajectory in 3-D phase space.
+Figure 3 will show the x, y, and z components of the soluton as functions of time in three separate panels (along with some relevant fixed points).
+See the screenshot below.
+
+![Alt Text](./results.png)
