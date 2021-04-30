@@ -3,11 +3,11 @@
 %You should only need to edit the first block of code
 
 %This controls how many iterations you compute
-N = 100;
+N = 200;
 %this is the inital value of the model
 x0 = 0.1;
 %And the parameter
-r =3.3;
+r =3.8;
 
 %SHOULD NOT NEED TO EDIT ANYTHING AFTER THIS
 
