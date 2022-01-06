@@ -53,7 +53,7 @@ end
 
 
 
-for j = 1:64
+for j = 1:128
     
     %IMPORTANT!!!!!!!
     %WHATEVER CHANGE YOU MAKE ABOVE ON LINE 44, YOU NEED TO MAKE THE SAME
