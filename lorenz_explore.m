@@ -34,7 +34,8 @@ time = [0 Tmax];
 lorenzprime = @(t,x) [sig*(x(2) - x(1));r*x(1) - x(2) - x(1)*x(3);x(1)*x(2) - b*x(3)];
 
 %Solve the ODE
-[T,Y] = ode45(lorenzprime,time,start,[r,sig,b]);
+opts = odeset('RelTol',1e-12,'AbsTol',1e-14);
+[T,Y] = ode45(lorenzprime,time,start,opts);
 
 %Now we plot phase space. 
 figure(1)
