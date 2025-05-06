@@ -47,7 +47,7 @@ for j = 1:10000
    % 'r' is the bifurcation parameter
    % 'cur' is the x_n variable
    % 'next' is the x_{n+1} variable
-   next = r*cur*(1-cur);
+   next = r*sin(pi*cur);
    cur = next;
 end
 
@@ -58,7 +58,7 @@ for j = 1:128
     %IMPORTANT!!!!!!!
     %WHATEVER CHANGE YOU MAKE ABOVE ON LINE 44, YOU NEED TO MAKE THE SAME
     %CHANGE HERE AS WELL!!!!!!!!!
-    next = r*cur*(1-cur);
+    next = r*sin(pi*cur);
     cur = next;
     x = [x;cur];
     

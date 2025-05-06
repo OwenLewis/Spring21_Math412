@@ -3,23 +3,20 @@
 %You should only need to edit the first block of code
 
 %This controls how many iterations you compute
-N = 5000;
+N = 500;
 %this is the inital value of the model
-x0 = 0.95;
+x0 = 0.5;
 %And the parameter
-r =3.7;
+r = 0.85;
 
 %SHOULD NOT NEED TO EDIT ANYTHING AFTER THIS
 
-mapping = @(x) r.*x.*(1-x); %Logistic map defined as inline funct.
-deriv = @(x) r-2*r.*x;
+mapping = @(x) r.*sin(pi*x); %Logistic map defined as inline funct.
 
 %getting ready to run simulations
 y = [x0;x0];
 z = linspace(0,1,100);
 fz = mapping(z);
-df = deriv(x0);
-lam = log(abs(df));
 x = x0;
 xz = [x];
 
@@ -28,20 +25,12 @@ for j = 1:N
     
     %Apply the map to our variable
     f = mapping(x);
-    fprime = deriv(x);
     %Get ready for next step
     x = f;
     %add the value to 'xz' for plot #2
     xz = [xz;x];
     %Add the value to 'y' for plot #1
     y = [y;x;x];
-    
-    %Now we're storing the derivative of the map at the various orbit
-    %points
-    df = [df;fprime];
-    %and using it to pudate the liapunov exponent
-    lam = [lam;mean(log(abs(df)))];
-    
     
 end
 
@@ -53,7 +42,7 @@ plot(z,fz,'k','LineWidth',4)
 hold off
 set(gca,'FontSize',14)
 set(gca,'YTick',[0,0.2,0.4,0.6,0.8,1])
-title('Cobweb plot of logistic map','FontSize',18)
+title('Cobweb plot of sine map','FontSize',18)
 xlabel('X_n','Fontsize',16)
 ylabel('X_{n+1}','Fontsize',16)
 
@@ -69,19 +58,4 @@ title('Solution sequence','FontSize',18)
 xlabel('n','Fontsize',16)
 ylabel('X_n','Fontsize',16)
 ylim([0 1])
-xlim([0 N+1])
-
-
-%Here we will plot the time sequence of our solution
-figure(3)
-plot(lam,'-','LineWidth',3)
-hold on
-plot(0*lam,'-.r','LineWidth',0.5)
-hold off
-set(gca,'FontSize',14)
-% set(gca,'YTick',[0,0.2,0.4,0.6,0.8,1])
-title('Approximate Liapunov Exponent','FontSize',18)
-xlabel('n','Fontsize',16)
-ylabel('\lambda','Fontsize',16)
-% ylim([0 1])
 xlim([0 N+1])

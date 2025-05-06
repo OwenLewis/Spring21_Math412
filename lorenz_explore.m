@@ -27,15 +27,28 @@ end
 
 %Intitial condition
 start = [x0,y0,z0];
-%Time inteval
-time = [0 Tmax];
 
 %Creating the inline function for the lorenz equations
-lorenzprime = @(t,x) [sig*(x(2) - x(1));r*x(1) - x(2) - x(1)*x(3);x(1)*x(2) - b*x(3)];
 
-%Solve the ODE
-opts = odeset('RelTol',1e-12,'AbsTol',1e-14);
-[T,Y] = ode45(lorenzprime,time,start,opts);
+if Tmax >= 0 
+    lorenzprime = @(t,x) [sig*(x(2) - x(1));r*x(1) - x(2) - x(1)*x(3);x(1)*x(2) - b*x(3)];
+    
+    %Time inteval
+    time = [0 Tmax];
+    %Solve the ODE
+    opts = odeset('RelTol',1e-12,'AbsTol',1e-14);
+    [T,Y] = ode45(lorenzprime,time,start,opts);
+
+else
+    lorenzprime = @(t,x) -[sig*(x(2) - x(1));r*x(1) - x(2) - x(1)*x(3);x(1)*x(2) - b*x(3)];
+    
+    %Time inteval
+    time = [0 -Tmax];
+    %Solve the ODE
+    opts = odeset('RelTol',1e-12,'AbsTol',1e-14);
+    [T,Y] = ode45(lorenzprime,time,start,opts);
+
+end
 
 %Now we plot phase space. 
 figure(1)
